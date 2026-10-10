@@ -11,7 +11,8 @@ phases:
   build:
     commands:
       - ng build -c production
+      - - ls -la dist/SampleAngularApp/browser
 artifacts:
-  base-directory: dist/sample-angular-app
+  base-directory: dist/sample-angular-app/browser
   files:
     - '**/*'
