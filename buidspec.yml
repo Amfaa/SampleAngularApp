@@ -12,7 +12,13 @@ phases:
     commands:
       - ng build -c production
       - ls -la dist/SampleAngularApp/browser
+      - npx ng build --configuration production
+      - echo "Checking Angular output directories"
+      - pwd
+      - ls -la
+      - find dist -maxdepth 5 -name index.html
+      - find dist -maxdepth 3 -type d
 artifacts:
-  base-directory: dist/sample-angular-app/browser
+  base-directory: dist
   files:
     - '**/*'
